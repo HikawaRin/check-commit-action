@@ -1,0 +1,26 @@
+{
+    "name": "check-commit-action",
+    "version": "1.0.0",
+    "description": "This action check the pull_requests commit message with commitlint",
+    "main": "index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HikawaRin/check-commit-action.git"
+    },
+    "keywords": [],
+    "author": "Hikawa Rin",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/HikawaRin/check-commit-action/issues"
+    },
+    "homepage": "https://github.com/HikawaRin/check-commit-action#readme",
+    "dependencies": {
+        "@actions/core": "^1.2.4",
+        "@actions/github": "^4.0.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^9.0.1",
+        "@commitlint/config-angular": "^9.0.1"
+    }
+}
