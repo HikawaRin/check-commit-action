@@ -16,4 +16,3 @@ jobs:
     - run: chmod -R +x ./
     - uses: HikawaRin/check-commit-action@master
       id: 'lint'
-    - run: echo "${{ steps.lint.outputs.result }}"

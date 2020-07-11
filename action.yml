@@ -8,9 +8,6 @@ inputs:
   token:
     description: "Used to cancel pull_request which not match format. Since there's a default, this is typically not supplied by the user."
     default: ${{ github.token }}
-outputs:
-  result:
-    description: 'The result of commit message check'
 runs:
   using: 'node12'
   main: 'index.js'

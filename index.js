@@ -17,10 +17,15 @@ try {
     commitMessage = JSON.stringify(github.context.payload.commits[0].message);
   }
   console.log(`Commit Message is: ${commitMessage}`);
-  process.execSync(`./lint.sh \"${commitMessage}\"`);
+  
+  const bashcmd = `./lint.sh ${commitMessage}`;
+  console.log(bashcmd);
+  process.execSync(bashcmd);
   
   const message = fs.readFileSync('error_message.txt');
-  core.setOutput("result", message.toString());
+  if (message.toString() != ""){
+    throw new Error(message.toString());
+  }
 } catch (error) {
   core.setFailed(error.message);
 }
