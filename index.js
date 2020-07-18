@@ -2,6 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const process = require('child_process');
 const fs = require('fs');
+const axios = require('axios');
 
 try {
   // `who-to-greet` input defined in action metadata file
