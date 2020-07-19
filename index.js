@@ -31,7 +31,7 @@ try {
           throw new Error(message.toString());
         }
       }catch(e){
-        console.log(e);
+        core.setFailed(e.message);
       }
     })();
   }else{
