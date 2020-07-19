@@ -14,6 +14,7 @@ try {
   var commitMessage; 
   if (JSON.parse(payload).hasOwnProperty("pull_request")){
     var url = JSON.stringify(github.context.payload.pull_request.commits_url);
+    url = url.replace(/^"*|\"*$/g, "");
     console.log(url);
     (async function(){
       try {
