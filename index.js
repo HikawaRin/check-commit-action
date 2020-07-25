@@ -49,7 +49,6 @@ try {
       }
     });
   }
-  // console.log(`Commit Message is: ${commitMessage}`);
 } catch (error) {
   core.setFailed(error.message);
 }
