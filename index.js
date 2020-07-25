@@ -19,17 +19,19 @@ try {
     (async function(){
       try {
         let res = await axios.get(url);
-        commitMessage = JSON.stringify(res.data[0].commit.message);
-        console.log(commitMessage);
-
-        const bashcmd = `./lint.sh ${commitMessage}`;
-        console.log(bashcmd);
-        process.execSync(bashcmd);
-        
-        const message = fs.readFileSync('error_message.txt');
-        if (message.toString() != ""){
-          throw new Error(message.toString());
-        }
+        res.data.forEach(element => {
+          var commitMessage = JSON.stringify(element.commit.message);
+          console.log(commitMessage);
+          
+          const bashcmd = `lint.sh ${commitMessage}`;
+          console.log(bashcmd);
+          process.execSync(bashcmd);
+          
+          const message = fs.readFileSync('error_message.txt');
+          if (message.toString() != ""){
+            throw new Error(message.toString());
+          }
+        });
       }catch(e){
         core.setFailed(e.message);
       }
