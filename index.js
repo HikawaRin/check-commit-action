@@ -21,9 +21,9 @@ try {
         let res = await axios.get(url);
         res.data.forEach(element => {
           var commitMessage = JSON.stringify(element.commit.message);
-          console.log(commitMessage);
+          console.log(`Commit Message is: ${commitMessage}`);
           
-          const bashcmd = `lint.sh ${commitMessage}`;
+          const bashcmd = `./lint.sh ${commitMessage}`;
           console.log(bashcmd);
           process.execSync(bashcmd);
           
