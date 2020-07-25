@@ -35,17 +35,19 @@ try {
       }
     })();
   }else{
-    commitMessage = JSON.stringify(github.context.payload.commits[0].message);
-    console.log(`Commit Message is: ${commitMessage}`);
+    github.context.payload.commits.forEach(element => {
+      commitMessage = JSON.stringify(element.message);
+      console.log(`Commit Message is: ${commitMessage}`);
 
-    const bashcmd = `./lint.sh ${commitMessage}`;
-    console.log(bashcmd);
-    process.execSync(bashcmd);
-    
-    const message = fs.readFileSync('error_message.txt');
-    if (message.toString() != ""){
-      throw new Error(message.toString());
-    }
+      const bashcmd = `./lint.sh ${commitMessage}`;
+      console.log(bashcmd);
+      process.execSync(bashcmd);
+      
+      const message = fs.readFileSync('error_message.txt');
+      if (message.toString() != ""){
+        throw new Error(message.toString());
+      }
+    });
   }
   // console.log(`Commit Message is: ${commitMessage}`);
 } catch (error) {
