@@ -1,0 +1,26 @@
+{
+  "name": "commitlint-config-megengine",
+  "version": "0.0.1",
+  "description": "A shareable [conventional-changelog-lint](https://github.com/conventional-changelog/commitlint) configuration for [MegEngine](https://github.com/MegEngine/MegEngine) commit convention.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HikawaRin/commitlint-config-megengine.git"
+  },
+  "keywords": [
+    "commitlint-config",
+    "MegEngine"
+  ],
+  "author": "Hikawa Rin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HikawaRin/commitlint-config-megengine/issues"
+  },
+  "homepage": "https://github.com/HikawaRin/commitlint-config-megengine#readme",
+  "dependencies": {
+    "commitlint-plugin-regexscope": "0.0.1"
+  }
+}

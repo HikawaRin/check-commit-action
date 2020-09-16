@@ -1,0 +1,3 @@
+[submodule "commitlint-config-megengine"]
+	path = commitlint-config-megengine
+	url = https://github.com/HikawaRin/commitlint-config-megengine.git
