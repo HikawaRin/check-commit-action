@@ -15,6 +15,5 @@ jobs:
     - run: npm test
     - run: chmod -R +x ./
     - run: git clone https://github.com/HikawaRin/commitlint-config-megengine.git megengine
-    - run: ls ./commitlint-config-megengine/
     - uses: HikawaRin/check-commit-action@master
       id: 'lint'
