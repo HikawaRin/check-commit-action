@@ -24,6 +24,8 @@ steps:
     - run: chmod -R +x ./
     - uses: HikawaRin/check-commit-action@master
       id: 'lint'
+      with: 
+        config: 'megengine'
 ```
 
 ## License  
