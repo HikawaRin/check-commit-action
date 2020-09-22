@@ -7,9 +7,14 @@ const axios = require('axios');
 try {
   // `who-to-greet` input defined in action metadata file
   const use_strict = core.getInput('use_strict');
-
+  const config = core.getInput('config');
   const payload = JSON.stringify(github.context.payload);
   // console.log(payload);
+
+  const configshell = `echo "module.exports = {extends: ['${config}']};" > commitlint.config.js
+  `;
+  console.log(configshell);
+  process.execSync(configshell);
 
   var commitMessage; 
   if (JSON.parse(payload).hasOwnProperty("pull_request")){

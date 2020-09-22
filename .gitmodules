@@ -1,3 +1,6 @@
 [submodule "commitlint-config-megengine"]
 	path = commitlint-config-megengine
 	url = https://github.com/HikawaRin/commitlint-config-megengine.git
+[submodule "commitlint-plugin-regexscope"]
+	path = commitlint-plugin-regexscope
+	url = https://github.com/HikawaRin/commitlint-plugin-regexscope.git

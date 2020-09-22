@@ -8,6 +8,9 @@ inputs:
   token:
     description: "Used to cancel pull_request which not match format. Since there's a default, this is typically not supplied by the user."
     default: ${{ github.token }}
+  config:
+    description: "Which config you want to use"
+    default: 'megengine'
 runs:
   using: 'node12'
   main: 'index.js'
