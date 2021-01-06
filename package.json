@@ -18,7 +18,7 @@
     "dependencies": {
         "@actions/core": "^1.2.4",
         "@actions/github": "^4.0.0",
-        "axios": "^0.19.2",
+        "axios": "^0.21.1",
         "commitlint-config-megengine": "1.0.0",
         "commitlint-plugin-regexscope": "0.0.1",
         "dot-prop": "^5.3.0",
