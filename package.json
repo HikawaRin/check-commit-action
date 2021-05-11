@@ -27,6 +27,6 @@
     "devDependencies": {
         "@commitlint/cli": "^9.1.2",
         "@commitlint/config-angular": "^9.0.1",
-        "lodash": ">=4.17.19"
+        "lodash": ">=4.17.21"
     }
 }
